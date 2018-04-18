@@ -8,4 +8,4 @@
 * Matplotlib
 * Seaborn
 
-> Continue to be updated...
+> UPDATE COMPLETE
