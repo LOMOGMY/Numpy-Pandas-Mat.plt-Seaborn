@@ -1,0 +1,15 @@
+备忘
+import matplotlib.pyplot as plt
+import seaborn as sns
+sns.set(style="ticks", color_codes=True)
+plt.style.use(plt.style.available[3])
+#plt.xkcd(False)
+fig,ax = plt.subplots(figsize = (9,6))
+plt.plot(pd.date_range('1960-01-01', periods = 50, freq = '1Y'),entropy_profile['AZ'],c='lightcoral',linestyle='-')
+plt.plot(pd.date_range('1960-01-01', periods = 50, freq = '1Y'),entropy_profile['CA'],c='teal',linestyle='-')
+plt.plot(pd.date_range('1960-01-01', periods = 50, freq = '1Y'),entropy_profile['NM'],c='lime',linestyle='-')
+plt.plot(pd.date_range('1960-01-01', periods = 50, freq = '1Y'),entropy_profile['TX'],c='r',linestyle='-')
+plt.grid(True)
+plt.legend(loc='best')
+plt.xlabel('Year');plt.ylabel('Entropy')
+ax.set_xticklabels(labels=[i for i in range(1960,2010)],rotation = 45,horizontalalignment='right')
